@@ -1,0 +1,29 @@
+{
+  "tasks": {
+    "dev": "vite",
+    "start": "vite --host",
+    "build": "deno run -A --node-modules-dir=auto npm:vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "imports": {
+    "@tailwindcss/vite": "npm:@tailwindcss/vite@^4.1.5",
+    "@tanstack/react-router": "npm:@tanstack/react-router@^1.119.0",
+    "@tanstack/react-router-devtools": "npm:@tanstack/react-router-devtools@^1.119.1",
+    "@tanstack/router-plugin": "npm:@tanstack/router-plugin@^1.119.0",
+    "react": "npm:react@^19.0.0",
+    "react-dom": "npm:react-dom@^19.0.0",
+    "tailwindcss": "npm:tailwindcss@^4.1.5",
+    "@eslint/js": "npm:@eslint/js@^9.22.0",
+    "@types/react": "npm:@types/react@^19.0.10",
+    "@types/react-dom": "npm:@types/react-dom@^19.0.4",
+    "@vitejs/plugin-react": "npm:@vitejs/plugin-react@^4.3.4",
+    "eslint": "npm:eslint@^9.22.0",
+    "eslint-plugin-react-hooks": "npm:eslint-plugin-react-hooks@^5.2.0",
+    "eslint-plugin-react-refresh": "npm:eslint-plugin-react-refresh@^0.4.19",
+    "globals": "npm:globals@^16.0.0",
+    "typescript": "npm:typescript@~5.7.2",
+    "typescript-eslint": "npm:typescript-eslint@^8.26.1",
+    "vite": "npm:vite@^6.3.1"
+  }
+}
