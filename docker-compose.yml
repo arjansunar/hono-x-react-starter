@@ -6,7 +6,7 @@ services:
       #     - "linux/amd64"
       dockerfile: ./apps/api/Dockerfile
     ports:
-     - "3001:3001"
+      - '3001:3001'
   spa:
     build:
       context: .
@@ -14,4 +14,4 @@ services:
       #     - "linux/amd64"
       dockerfile: ./apps/spa/Dockerfile
     ports:
-     - "5173:5173"
+      - '5173:5173'
