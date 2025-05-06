@@ -13,6 +13,8 @@ import type { InsertUser } from '@workspace/db'
 
 const app = new Hono()
 
+export type AppType = typeof app
+
 export async function createDummyUser(data: InsertUser) {
 	await db.insert(schema.users).values(data)
 }
