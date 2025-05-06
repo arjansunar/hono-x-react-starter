@@ -3339,7 +3339,7 @@
           "npm:postgres@3.4.5"
         ]
       },
-      "packages/types": {
+      "packages/schema": {
         "dependencies": [
           "npm:arktype@^2.1.20"
         ]
