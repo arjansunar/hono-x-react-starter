@@ -1,4 +1,5 @@
 {
+	"name": "@apps/api",
 	"tasks": {
 		"dev": "deno run -A --env-file --watch src/index.ts",
 		"start": "deno run -A --env-file src/index.ts"
@@ -8,7 +9,7 @@
 		"@scalar/hono-api-reference": "npm:@scalar/hono-api-reference@^0.8.8",
 		"arktype": "npm:arktype@^2.1.20",
 		"hono": "npm:hono@4.7.8",
-		"hono-openapi": "npm:hono-openapi@^0.4.8",
-		"zod": "npm:zod@3.24.3"
-	}
+		"hono-openapi": "npm:hono-openapi@^0.4.8"
+	},
+	"exports": "./src/index.ts"
 }
