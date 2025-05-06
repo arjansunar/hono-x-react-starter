@@ -2,6 +2,9 @@
   "version": "5",
   "specifiers": {
     "npm:@eslint/js@^9.22.0": "9.26.0",
+    "npm:@hono/arktype-validator@^2.0.1": "2.0.1_arktype@2.1.20_hono@4.7.8",
+    "npm:@scalar/hono-api-reference@*": "0.8.8_hono@4.7.8",
+    "npm:@scalar/hono-api-reference@~0.8.8": "0.8.8_hono@4.7.8",
     "npm:@tailwindcss/vite@^4.1.5": "4.1.5_vite@6.3.4__picomatch@4.0.2",
     "npm:@tanstack/react-router-devtools@^1.119.1": "1.119.1_@tanstack+react-router@1.119.0__react@19.1.0__react-dom@19.1.0___react@19.1.0_react@19.1.0_react-dom@19.1.0__react@19.1.0_solid-js@1.9.6__seroval@1.2.1",
     "npm:@tanstack/react-router@^1.119.0": "1.119.0_react@19.1.0_react-dom@19.1.0__react@19.1.0",
@@ -9,6 +12,7 @@
     "npm:@types/react-dom@^19.0.4": "19.1.3_@types+react@19.1.2",
     "npm:@types/react@^19.0.10": "19.1.2",
     "npm:@vitejs/plugin-react@^4.3.4": "4.3.4_vite@6.3.4__picomatch@4.0.2_@babel+core@7.27.1",
+    "npm:arktype@^2.1.20": "2.1.20",
     "npm:better-auth@1.1.11": "1.1.11",
     "npm:create-vite@*": "6.4.1",
     "npm:drizzle-kit@0.30.1": "0.30.1_esbuild@0.19.12",
@@ -17,6 +21,7 @@
     "npm:eslint-plugin-react-refresh@~0.4.19": "0.4.20_eslint@9.26.0",
     "npm:eslint@^9.22.0": "9.26.0",
     "npm:globals@16": "16.0.0",
+    "npm:hono-openapi@~0.4.8": "0.4.8_@hono+arktype-validator@2.0.1__arktype@2.1.20__hono@4.7.8_arktype@2.1.20_hono@4.7.8_openapi-types@12.1.3_zod@3.24.1",
     "npm:hono@*": "4.7.8",
     "npm:hono@4.7.8": "4.7.8",
     "npm:postgres@3.4.5": "3.4.5",
@@ -37,6 +42,23 @@
         "@jridgewell/gen-mapping",
         "@jridgewell/trace-mapping"
       ]
+    },
+    "@apidevtools/json-schema-ref-parser@11.9.3": {
+      "integrity": "sha512-60vepv88RwcJtSHrD6MjIL6Ta3SOYbgfnkHb+ppAVK+o9mXprRtulx7VlRl3lN3bbvysAfCS7WMVfhUYemB0IQ==",
+      "dependencies": [
+        "@jsdevtools/ono",
+        "@types/json-schema",
+        "js-yaml"
+      ]
+    },
+    "@ark/schema@0.46.0": {
+      "integrity": "sha512-c2UQdKgP2eqqDArfBqQIJppxJHvNNXuQPeuSPlDML4rjw+f1cu0qAlzOG4b8ujgm9ctIDWwhpyw6gjG5ledIVQ==",
+      "dependencies": [
+        "@ark/util"
+      ]
+    },
+    "@ark/util@0.46.0": {
+      "integrity": "sha512-JPy/NGWn/lvf1WmGCPw2VGpBg5utZraE84I7wli18EDF3p3zc/e9WolT35tINeZO3l7C77SjqRJeAUoT0CvMRg=="
     },
     "@babel/code-frame@7.27.1": {
       "integrity": "sha512-cjQ7ZlQ0Mv3b47hABuTevyTuYN4i+loJKGeV9flcCgIK37cCXRh+L1bd3iBHlynerhQ7BhCkn2BPbQUL+rGqFg==",
@@ -885,6 +907,13 @@
     "@hexagon/base64@1.1.28": {
       "integrity": "sha512-lhqDEAvWixy3bZ+UOYbPwUbBkwBq5C1LAJ/xPC8Oi+lL54oyakv/npbA0aU2hgCsx/1NUd4IBvV03+aUBWxerw=="
     },
+    "@hono/arktype-validator@2.0.1_arktype@2.1.20_hono@4.7.8": {
+      "integrity": "sha512-Z4PQFtzgbGneBap+TTViRIBAoUWbwEwg8PaKNqALAP6z9N2ksJI81PfcsSQNUzwtrn8LipkMvBb8/D9Pei2GJw==",
+      "dependencies": [
+        "arktype",
+        "hono"
+      ]
+    },
     "@humanfs/core@0.19.1": {
       "integrity": "sha512-5DyQ4+1JEUzejeK1JGICcideyfUbGixgS9jNgex5nqkW+cY7WZhxBigmieN5Qnw9ZosSNVC9KQKyb+GUaGyKUA=="
     },
@@ -927,6 +956,9 @@
         "@jridgewell/resolve-uri",
         "@jridgewell/sourcemap-codec"
       ]
+    },
+    "@jsdevtools/ono@7.1.3": {
+      "integrity": "sha512-4JQNk+3mVzK3xh2rqd6RB4J46qUR19azEHBneZyTZM+c456qOrbbM/5xcR8huNCCcbVt7+UmizG6GuUvPvKUYg=="
     },
     "@levischuck/tiny-cbor@0.2.2": {
       "integrity": "sha512-f5CnPw997Y2GQ8FAvtuVVC19FX8mwNNC+1XJcIi16n/LTJifKO6QBgGLgN3YEmqtGMk17SKSuoWES3imJVxAVw=="
@@ -1217,6 +1249,33 @@
       "integrity": "sha512-ECyOuDeH3C1I8jH2MK1RtBJW+YPMvSfT0a5NN0nHfQYnDSJ6tUiZH3gzwVP5/Kfh/+Tt7tpWVF9LXNTnhTJ3kA==",
       "os": ["win32"],
       "cpu": ["x64"]
+    },
+    "@scalar/core@0.2.14": {
+      "integrity": "sha512-w2oLqUVJt88ed2uHKFgg8UOFeyHDpi3QmSJqqc4CZPjAz/lKj34antHYMEG3A4Iom+06W31XQeqFO9zQ2eNsfA==",
+      "dependencies": [
+        "@scalar/types"
+      ]
+    },
+    "@scalar/hono-api-reference@0.8.8_hono@4.7.8": {
+      "integrity": "sha512-VLpgkUOcKg4SSnWwp6/hGF5gNypeL+e791HD4ANmxImU8k+VbsKh53W7ZOivRY1fIMkPcd0TvzQvKm2MqyJDJw==",
+      "dependencies": [
+        "@scalar/core",
+        "hono"
+      ]
+    },
+    "@scalar/openapi-types@0.2.2": {
+      "integrity": "sha512-fwWboUf3W5U4qWU7nj4jrs+KYilnfKyVp0d6LC1ejB2aROgWXIAscRtVaPLPaNLpTZOBsMC8XpiAPm3/SlU+mA==",
+      "dependencies": [
+        "zod@3.24.1"
+      ]
+    },
+    "@scalar/types@0.1.14": {
+      "integrity": "sha512-N7qZ9qARJfi4Gl5MEsRfwPHFWs68qDXWQ+jGi05LGExDqErAJStc4PPkEmxt44uSO4+TVx4ADxWB6xNoGMG/Zg==",
+      "dependencies": [
+        "@scalar/openapi-types",
+        "nanoid@5.1.5",
+        "zod@3.24.1"
+      ]
     },
     "@simplewebauthn/browser@13.1.0": {
       "integrity": "sha512-WuHZ/PYvyPJ9nxSzgHtOEjogBhwJfC8xzYkPC+rR/+8chl/ft4ngjiK8kSU5HtRJfczupyOh33b25TjYbvwAcg=="
@@ -1735,6 +1794,13 @@
     "argparse@2.0.1": {
       "integrity": "sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q=="
     },
+    "arktype@2.1.20": {
+      "integrity": "sha512-IZCEEXaJ8g+Ijd59WtSYwtjnqXiwM8sWQ5EjGamcto7+HVN9eK0C4p0zDlCuAwWhpqr6fIBkxPuYDl4/Mcj/+Q==",
+      "dependencies": [
+        "@ark/schema",
+        "@ark/util"
+      ]
+    },
     "asn1js@3.0.5": {
       "integrity": "sha512-FVnvrKJwpt9LP2lAMl8qZswRNm3T4q9CON+bxldk2iwk3FFpuwhx2FfinyitizWHsVYyaY+y5JzDR0rCMV5yTQ==",
       "dependencies": [
@@ -1874,6 +1940,9 @@
       "optionalDependencies": [
         "fsevents"
       ]
+    },
+    "clone@2.1.2": {
+      "integrity": "sha512-3Pe/CF1Nn94hyhIYpjtiLhdCoEoz0DqQ+988E9gmeEdQZlojxnOb74wctFyuwWQHzqyf9X7C7MG8juUpqBJT8w=="
     },
     "clsx@2.1.1": {
       "integrity": "sha512-eYm0QWBtUrBWZWG0d386OGAw16Z995PiOVo2B7bjWSbHedGl5e0ZWaq65kOGgUSNesEIDkB9ISbTg/JK9dhCZA=="
@@ -2437,6 +2506,23 @@
         "function-bind"
       ]
     },
+    "hono-openapi@0.4.8_@hono+arktype-validator@2.0.1__arktype@2.1.20__hono@4.7.8_arktype@2.1.20_hono@4.7.8_openapi-types@12.1.3_zod@3.24.1": {
+      "integrity": "sha512-LYr5xdtD49M7hEAduV1PftOMzuT8ZNvkyWfh1DThkLsIr4RkvDb12UxgIiFbwrJB6FLtFXLoOZL9x4IeDk2+VA==",
+      "dependencies": [
+        "@hono/arktype-validator",
+        "arktype",
+        "hono",
+        "json-schema-walker",
+        "openapi-types",
+        "zod@3.24.1"
+      ],
+      "optionalPeers": [
+        "@hono/arktype-validator",
+        "arktype",
+        "hono",
+        "zod@3.24.1"
+      ]
+    },
     "hono@4.7.8": {
       "integrity": "sha512-PCibtFdxa7/Ldud9yddl1G81GjYaeMYYTq4ywSaNsYbB1Lug4mwtOMJf2WXykL0pntYwmpRJeOI3NmoDgD+Jxw=="
     },
@@ -2525,6 +2611,13 @@
     },
     "json-schema-traverse@0.4.1": {
       "integrity": "sha512-xbbCH5dCYU5T8LcEhhuh7HJ88HXuW3qsI3Y0zOZFKfZEHcpWiHU/Jxzk629Brsab/mMiHQti9wMP+845RPe3Vg=="
+    },
+    "json-schema-walker@2.0.0": {
+      "integrity": "sha512-nXN2cMky0Iw7Af28w061hmxaPDaML5/bQD9nwm1lOoIKEGjHcRGxqWe4MfrkYThYAPjSUhmsp4bJNoLAyVn9Xw==",
+      "dependencies": [
+        "@apidevtools/json-schema-ref-parser",
+        "clone"
+      ]
     },
     "json-stable-stringify-without-jsonify@1.0.1": {
       "integrity": "sha512-Bdboy+l7tA3OGW6FjyFHWkP5LuByj1Tk33Ljyq0axyzdk9//JSi2u3fP1QSmd1KNwq6VOKYGlAu87CisVir6Pw=="
@@ -2679,6 +2772,10 @@
       "integrity": "sha512-N8SpfPUnUp1bK+PMYW8qSWdl9U+wwNWI4QKxOYDy9JAro3WMX7p2OeVRF9v+347pnakNevPmiHhNmZ2HbFA76w==",
       "bin": true
     },
+    "nanoid@5.1.5": {
+      "integrity": "sha512-Ir/+ZpE9fDsNH0hQ3C68uyThDXzYcim2EqcZ8zn8Chtt1iylPT9xXJB0kPCnqzgcEGikO9RxSrh63MsmVCU7Fw==",
+      "bin": true
+    },
     "natural-compare@1.4.0": {
       "integrity": "sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw=="
     },
@@ -2708,6 +2805,9 @@
       "dependencies": [
         "wrappy"
       ]
+    },
+    "openapi-types@12.1.3": {
+      "integrity": "sha512-N4YtSYJqghVu4iek2ZUvcN/0aqH1kRDuNqzcycDxhOUpg7GdvLa2F3DgS6yBNhInhv2r/6I0Flkn7CqL8+nIcw=="
     },
     "optionator@0.9.4": {
       "integrity": "sha512-6IpQ7mKUxRcZNLIObR0hz7lxsapSSIYNZJwXPGeF0mTVqGKFIXj1DQcMoT22S3ROcLyY/rz0PWaWZ9ayWmad9g==",
@@ -2765,7 +2865,7 @@
     "postcss@8.5.3": {
       "integrity": "sha512-dle9A3yYxlBSrt8Fu+IpjGT8SY8hN0mlaA6GY8t0P5PjIOZemULz/E2Bnm/2dcUOena75OTNkHI76uZBNUUq3A==",
       "dependencies": [
-        "nanoid",
+        "nanoid@3.3.11",
         "picocolors",
         "source-map-js"
       ]
@@ -3197,6 +3297,10 @@
     "members": {
       "apps/api": {
         "dependencies": [
+          "npm:@hono/arktype-validator@^2.0.1",
+          "npm:@scalar/hono-api-reference@~0.8.8",
+          "npm:arktype@^2.1.20",
+          "npm:hono-openapi@~0.4.8",
           "npm:hono@4.7.8",
           "npm:zod@3.24.3"
         ]
@@ -3233,6 +3337,11 @@
           "npm:drizzle-kit@0.30.1",
           "npm:drizzle-orm@0.38.2",
           "npm:postgres@3.4.5"
+        ]
+      },
+      "packages/types": {
+        "dependencies": [
+          "npm:arktype@^2.1.20"
         ]
       }
     }
