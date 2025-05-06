@@ -11,15 +11,7 @@ import { User } from '@workspace/schema'
 
 import type { InsertUser } from '@workspace/db'
 
-const app = new Hono()
-
-export type AppType = typeof app
-
-export async function createDummyUser(data: InsertUser) {
-	await db.insert(schema.users).values(data)
-}
-
-app.get(
+const app = (new Hono()).get(
 	'/user',
 	describeRoute({
 		description: 'Say hello to the user',
@@ -37,9 +29,7 @@ app.get(
 		const query = c.req.valid('query')
 		return c.json(query)
 	},
-)
-
-app.get('/', (c) => {
+).get('/', (c) => {
 	return c.text('Hello Hono!')
 })
 
@@ -74,15 +64,20 @@ app.get(
 	}),
 )
 
-// Use the middleware to serve the Scalar API Reference at /scalar
 app.get('/scalar', Scalar({ url: '/openapi' }))
 
 app.on(['POST', 'GET'], '/api/auth/**', (c) => {
 	return auth.handler(c.req.raw)
 })
 
+export async function createDummyUser(data: InsertUser) {
+	await db.insert(schema.users).values(data)
+}
+
 const port = 3001
 console.log(`Server is running on http://localhost:${port}`)
 console.log(`Database URL: ${Deno.env.get('DATABASE_URL') ?? 'Not set'}`)
 
 Deno.serve({ port }, app.fetch)
+
+export type AppType = typeof app
