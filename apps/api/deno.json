@@ -3,9 +3,12 @@
 		"dev": "deno run -A --env-file --watch src/index.ts",
 		"start": "deno run -A --env-file src/index.ts"
 	},
-
 	"imports": {
+		"@hono/arktype-validator": "npm:@hono/arktype-validator@^2.0.1",
+		"@scalar/hono-api-reference": "npm:@scalar/hono-api-reference@^0.8.8",
+		"arktype": "npm:arktype@^2.1.20",
 		"hono": "npm:hono@4.7.8",
+		"hono-openapi": "npm:hono-openapi@^0.4.8",
 		"zod": "npm:zod@3.24.3"
 	}
 }

@@ -2,7 +2,7 @@
 
 ## Directory Structure
 
-```
+```shell
 .
 ├── apps                         # Apps
 │    ├── api                     # Hono + Trpc
