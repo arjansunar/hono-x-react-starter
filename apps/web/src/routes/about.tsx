@@ -1,9 +1,15 @@
-import { createFileRoute } from '@tanstack/react-router'
+import { createFileRoute } from "@tanstack/react-router";
+import { useEffect } from "react";
+import { demoApi } from "../data/index.ts";
 
-export const Route = createFileRoute('/about')({
-	component: About,
-})
+export const Route = createFileRoute("/about")({
+  component: About,
+});
 
 function About() {
-	return <div className='p-2'>Hello from About!</div>
+  useEffect(() => {
+    demoApi().then(console.log);
+  }, []);
+
+  return <div className="p-2">Hello from About!</div>;
 }

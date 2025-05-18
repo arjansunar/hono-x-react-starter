@@ -7,6 +7,7 @@
 		"preview": "vite preview"
 	},
 	"imports": {
+		"@deno/vite-plugin": "npm:@deno/vite-plugin@^1.0.4",
 		"@tailwindcss/vite": "npm:@tailwindcss/vite@^4.1.5",
 		"@tanstack/react-router": "npm:@tanstack/react-router@^1.119.0",
 		"@tanstack/react-router-devtools": "npm:@tanstack/react-router-devtools@^1.119.1",
